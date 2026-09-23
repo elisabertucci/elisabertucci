@@ -1,0 +1,8 @@
+baseURL = "https://elisabertuccidesign.com/"
+title = "Elisa's Portfolio & Blog"
+theme = "PaperMod"
+locale = "en-us"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Notes on service design, circular materials, and design research."
