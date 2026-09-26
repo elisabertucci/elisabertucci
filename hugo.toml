@@ -1,0 +1,7 @@
+baseURL = 'https://elisabertuccidesign.com/'
+locale = 'en-us'
+title = 'Portfolio Elisa Bertucci'
+theme = 'gallery'
+[module]
+  [[module.imports]]
+    path = "github.com/nicokaiser/hugo-theme-gallery/v4"
