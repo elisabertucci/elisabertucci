@@ -1,9 +1,9 @@
 ---
 description: "A thread on Material.Data: the BA thesis that started as an environmental-research rabbit hole and became a materials library for design, architecture, and engineering students — the research, the insight, and the prototype it turned into, built for how people actually search.  BA thesis, Product & Communication Design, Università degli Studi di Genova (2021–2024)."
 menus: "main"
-title: Fashion & Beauty
+title: Bachelor Thesis
 weight: 2
-categories: ["beauty", "Thesis"]
+categories: ["Bachelor", "Thesis"]
 params:
   theme: light
 resources:
