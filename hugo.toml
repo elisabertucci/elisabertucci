@@ -1,6 +1,6 @@
 baseURL = 'https://elisabertuccidesign.com/'
 locale = 'en-us'
-title = 'Portfolio Elisa Bertucci'
+title = 'Elisa Bertucci'
 theme = 'gallery'
 [module]
   [[module.imports]]
