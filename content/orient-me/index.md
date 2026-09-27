@@ -9,6 +9,7 @@ params:
   theme: light
 resources:
   - src: 1.jpg
+      title: 1
     params:
       cover: true
   - src: 2.jpg
