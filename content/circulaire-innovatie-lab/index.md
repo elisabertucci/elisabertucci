@@ -3,7 +3,7 @@ description: "A digital material catalogue and warehouse classification system b
 menus: "main"
 date: 2026-04-01
 title: "Cilab Mechelen"
-categories: ["Circular Economy"]
+categories: ["product & service design"]
 weight: 3
 params:
   featured_image: cilab.jpg
