@@ -2,7 +2,7 @@
 description: "A digital material catalogue and warehouse classification system built during a service design internship."
 menus: "main"
 date: 2026-04-01
-title: "Cilab Mechelen"
+title: "Internship at Cilab Mechelen"
 categories: ["product & service design","space & service design"]
 weight: 3
 params:
