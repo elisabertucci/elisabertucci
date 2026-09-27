@@ -3,7 +3,7 @@ description: "A thread on Material.Data: the BA thesis that started as an enviro
 menus: "main"
 title: Bachelor Thesis
 weight: 2
-categories: ["Bachelor", "Thesis"]
+categories: ["Material.Data (BSc. Thesis)"]
 params:
   theme: light
 resources:
