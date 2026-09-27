@@ -29,5 +29,5 @@ theme = 'gallery'
   defaultTheme = 'dark'   
   [params.socialIcons]
     email = 'mailto:elisamariabertucci@gmail.com'
-    linkedin = 'https://linkedin.com/in/elisa-bertucci-885060222'
+    linkedin = 'https://linkedin.com/in/elisa-bertucci-885060222/'
     behance = "https://behance.net/elisabertucci"
