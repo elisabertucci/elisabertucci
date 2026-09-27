@@ -9,7 +9,7 @@ params:
   theme: light
 resources:
   - src: thesis.jpg
-      title: Material.Data logo
+    title: Material Data logo
     params:
       cover: true
   - src: 1.jpg
