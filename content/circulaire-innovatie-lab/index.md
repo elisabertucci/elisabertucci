@@ -2,8 +2,8 @@
 description: "A digital material catalogue and warehouse classification system built during a service design internship."
 menus: "main"
 date: 2026-04-01
-title: "Material library for a circular textile lab"
-categories: ["Circulaire Innovatie Laboratorium"]
+title: "Cilab Mechelen"
+categories: ["Circular Economy"]
 weight: 3
 params:
   featured_image: cilab.jpg
@@ -20,5 +20,3 @@ During my internship at Circulaire Innovatie Laboratorium in Mechelen, I worked 
 My main project was a digital material library and catalogue built to serve two very different audiences at once: clients browsing available materials, and production staff managing inventory. Alongside it, I researched inventory needs and designed a warehouse classification system built to scale as the collection grows.
 
 Internship, Circulaire Innovatie Laboratorium, Mechelen, Belgium (2026).
-
-*[Add catalogue screenshots, the classification system, or photos from the lab here.]*
