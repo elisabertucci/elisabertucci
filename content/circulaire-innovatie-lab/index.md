@@ -1,16 +1,17 @@
 ---
-description: Through photography, the beauty of Mother Nature can be frozen in time. This category celebrates the magic of our planet and beyond — from the immensity of the great outdoors, to miraculous moments in your own backyard.
+description: "A digital material catalogue and warehouse classification system built during a service design internship."
 menus: "main"
-title: Nature
+date: 2026-04-01
+title: "Material library for a circular textile lab"
 categories: ["Circulaire Innovatie Laboratorium"]
 weight: 3
 params:
-  featured_image: azzedine-rouichi-ZS_XuDZmxpM-unsplash.jpg
+  featured_image: cilab.jpg
   theme: dark
   sort_order: desc
   sort_by: Name # Exif.Date
 resources:
-  - src: azzedine-rouichi-ZS_XuDZmxpM-unsplash.jpg
+  - src: cilab.jpg
     params:
       cover: true
 ---
