@@ -1,5 +1,5 @@
 ---
-description: An example site for hugo-theme-gallery. Images from Unsplash.
+description: A look into what I've done in the past.
 #lastmod: 2023-07-05
 title: Portfolio
 resources:
