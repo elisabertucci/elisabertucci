@@ -7,6 +7,7 @@ categories: ["Service & Graphic Design"]
 weight: 3
 resources:
   - src: gutsy.jpg
+    title: 1
     params:
       cover: true
 ---
