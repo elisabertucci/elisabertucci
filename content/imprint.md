@@ -1,5 +1,5 @@
 ---
-title: Imprint
+title: Elisa Bertucci
 rss_ignore: true
 layout: prose
 menu:
@@ -7,4 +7,4 @@ menu:
     weight: 1
 ---
 
-(Put your imprint here)
+Copyright © 2026 Elisa Bertucci
