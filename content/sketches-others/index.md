@@ -1,10 +1,9 @@
 ---
 description: "Sketches & other works"
-menus: "main"
 date: 2026-04-01
 title: "Sketches & other works"
 categories: ["Space & Service Design"]
-weight: 9
+weight: 8
 resources:
   - src: 1.jpg
     title: 1

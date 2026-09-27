@@ -1,6 +1,5 @@
 ---
 description: "Gutsy"
-menus: "main"
 date: 2026-04-01
 title: "Gutsy"
 categories: ["Service & Graphic Design"]

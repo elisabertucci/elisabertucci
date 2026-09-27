@@ -1,10 +1,9 @@
 ---
 description: "New services, spatial ideas and a playground for a provincial recreation domain — postgraduate capstone project."
-menus: "main"
 date: 2026-04-01
 title: "Service design for Zilvermeer"
 categories: ["Space & Service Design"]
-weight: 3
+weight: 2
 params:
   featured_image: zilver.jpg
   theme: dark

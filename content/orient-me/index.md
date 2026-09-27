@@ -1,9 +1,8 @@
 ---
 description: "Orient Me"
-menus: "main"
 title: Orient Me
 categories: ["Product & Service design"]
-weight: 2
+weight: 6
  ["Orient Me (Group Project)"]
 params:
   theme: light
