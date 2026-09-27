@@ -11,9 +11,9 @@ resources:
   - src: thesis.jpg
     params:
       cover: true
+  - src: 1.jpg
+    title: Every studio project I've worked on has hit the same wall: the right material exists, but the info about it is scattered across supplier PDFs, scribbled notes, and half-remembered workshop tips. Nothing a whole team can search or compare together.
 ---
-Every studio project I've worked on has hit the same wall: the right material exists, but the info about it is scattered across supplier PDFs, scribbled notes, and half-remembered workshop tips. Nothing a whole team can search or compare together.
-
 So I spent my BA thesis year building the fix: Material.Data, a digital materials library for University of Genoa's design, architecture, and engineering students — cataloguing properties, sustainability profile, and real-world use in one place.
 
 It actually started as environmental research, not a design brief. Deep in life-cycle assessment and waste-based biomaterials, one thing kept clicking: as bio-based and new materials multiply, picking the right one only gets harder without a guide.
