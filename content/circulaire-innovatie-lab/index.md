@@ -3,7 +3,7 @@ description: "A digital material catalogue and warehouse classification system b
 menus: "main"
 date: 2026-04-01
 title: "Internship at Cilab Mechelen"
-categories: ["product & service design","space & service design"]
+categories: ["Product & Service Design","Space & Service Design"]
 weight: 3
 params:
   featured_image: cilab.jpg
