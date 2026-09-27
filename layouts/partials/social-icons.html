@@ -50,7 +50,7 @@
   {{ end }}
   {{ with .behance }}
   <a target="_blank" rel="noopener" title="Behance" href="{{ . }}">
-    <img src="{{ "behance.svg" | relURL }}" alt="Behance" width="24" height="24" loading="lazy">
+    {{ with resources.Get "icons/behance.svg" }}{{ .Content | safeHTML }}{{ end }}
   </a>
   {{ end }}
   {{ with index . "500px" }}
