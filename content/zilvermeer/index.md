@@ -3,7 +3,7 @@ description: "New services, spatial ideas and a playground for a provincial recr
 menus: "main"
 date: 2026-04-01
 title: "Service design for Zilvermeer"
-categories: ["service-design"]
+categories: ["space & service design"]
 weight: 3
 params:
   featured_image: zilver.jpg
