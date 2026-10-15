@@ -1,74 +1,58 @@
 /**
- * WEBSITE: https://themefisher.com
- * TWITTER: https://twitter.com/themefisher
- * FACEBOOK: https://www.facebook.com/themefisher
- * GITHUB: https://github.com/themefisher/
+ * Elisa Maria Bertucci, portfolio
+ * Based on Thomson by Themefisher (https://themefisher.com), MIT licence.
+ *
+ * Every block only runs when its plugin is loaded and its element is on the
+ * page, so one page's missing gallery can no longer stop the rest of the script.
  */
-
-
-
 (function ($) {
-    'use strict';
-    
-AOS.init({
-    once: true
-});
+  'use strict';
 
-    // ----------------------- 
-        // Progress Bar--------------------
-        // 
-        // 
+  // Scroll-in animations
+  if (window.AOS) {
+    AOS.init({ once: true });
+  }
 
-    $(window).on ('load', function (){ 
-          
-        $('.progress-bar').each(function(){
-                var width = $(this).data('percent');
-                $(this).css({'transition': 'width 3s'});
-                $(this).appear(function() {
-                    console.log('hello');
-                    $(this).css('width', width + '%');
-                    $(this).find('.count').countTo({
-                        from: 0,
-                        to: width,
-                        speed: 3000,
-                        refreshInterval: 50
-                    });
-                });
-            });
-        }); 
-
-    $('.owl-carousel').owlCarousel({
-        items:1,
-        loop:true,
-        autoplay:true,
-        dots:false,
-        autoplayTimeout:8000
-    });
-
-    // Shuffle js filter and masonry
-    var Shuffle = window.Shuffle;
-    var jQuery = window.jQuery;
-
-    var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
-        itemSelector: '.shuffle-item',
-        buffer: 1
-    });
-
-    jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
-        var input = evt.currentTarget;
-        if (input.checked) {
-            myShuffle.filter(input.value);
+  // Skill bars (How I work page)
+  $(window).on('load', function () {
+    if (!$.fn.appear) return;
+    $('.progress-bar').each(function () {
+      var $bar = $(this);
+      var width = $bar.data('percent');
+      $bar.css({ transition: 'width 3s' });
+      $bar.appear(function () {
+        $bar.css('width', width + '%');
+        if ($.fn.countTo) {
+          $bar.find('.count').countTo({ from: 0, to: width, speed: 3000, refreshInterval: 50 });
         }
+      });
     });
+  });
 
-     $('.portfolio-gallery').each(function () {
-        $(this).find('.popup-gallery').magnificPopup({
-            type: 'image',
-            gallery: {
-                enabled: true
-            }
-        });
+  // Question slider (How I work page)
+  if ($.fn.owlCarousel && $('.owl-carousel').length) {
+    $('.owl-carousel').owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      dots: false,
+      autoplayTimeout: 8000
     });
+  }
 
+  // Project grid filter (home page)
+  var grid = document.querySelector('.shuffle-wrapper');
+  if (window.Shuffle && grid) {
+    var shuffle = new window.Shuffle(grid, { itemSelector: '.shuffle-item', buffer: 1 });
+    $('input[name="shuffle-filter"]').on('change', function (evt) {
+      if (evt.currentTarget.checked) shuffle.filter(evt.currentTarget.value);
+    });
+  }
 
+  // Image lightbox, wherever a gallery uses it
+  if ($.fn.magnificPopup) {
+    $('.portfolio-gallery').each(function () {
+      $(this).find('.popup-gallery').magnificPopup({ type: 'image', gallery: { enabled: true } });
+    });
+  }
 })(jQuery);

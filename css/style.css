@@ -722,3 +722,29 @@ textarea.form-control {
 }
 .navbar-brand img { height: 40px; width: auto; }
 /*# sourceMappingURL=style.css.map */
+
+/* Case study hero: never wider than the page column, and a calmer height */
+.case-hero {
+  aspect-ratio: 12 / 5;
+  margin: 0 0 64px;
+  overflow: hidden;
+  background: var(--travertine);
+}
+.case-hero img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* Edge-to-edge artwork fills the frame instead of floating in it */
+.case-hero img[src*="zilvermeer"],
+.case-hero img[src*="materialdata"] {
+  object-fit: cover;
+}
+@media (max-width: 767px) {
+  .case-hero {
+    aspect-ratio: 16 / 10;
+    margin-bottom: 40px;
+  }
+}
