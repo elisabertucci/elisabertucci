@@ -720,4 +720,5 @@ textarea.form-control {
 .footer-widget a:hover {
   color: var(--oak);
 }
+.navbar-brand img { height: 40px; width: auto; }
 /*# sourceMappingURL=style.css.map */
