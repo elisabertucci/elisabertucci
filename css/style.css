@@ -1,20 +1,25 @@
 /**
- * WEBSITE: https://themefisher.com
- * TWITTER: https://twitter.com/themefisher
- * FACEBOOK: https://www.facebook.com/themefisher
- * GITHUB: https://github.com/themefisher/
+ * Elisa Maria Bertucci, portfolio
+ * Based on Thomson by Themefisher (https://themefisher.com), MIT licence
  */
 
-/*!------------------------------------------------------------------
-[MAIN STYLESHEET]
-
-PROJECT:	Thomson
-VERSION:	1.0
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-[TABLE OF CONTENTS]
--------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Lato:400,600,700|Work+Sans:400,700,800");
+
+/*------------------------------------------------------------------
+  PALETTE
+  A tonal material board. Change a colour here and it updates everywhere.
+-------------------------------------------------------------------*/
+:root {
+  --plaster:    #F5F0EA; /* page background */
+  --paper:      #FBF8F4; /* menus, inputs, card labels */
+  --travertine: #E8DFD3; /* soft surfaces, borders, bar tracks */
+  --oak:        #C4A88A; /* fine lines, highlights on dark */
+  --walnut:     #7A5C44; /* accent: links, buttons, headline words */
+  --stone:      #B9AE9F; /* text on dark backgrounds */
+  --taupe:      #685E55; /* body text */
+  --espresso:   #2E2823; /* headings, footer, dark buttons */
+}
+
 html {
   overflow-x: hidden;
 }
@@ -26,16 +31,22 @@ body {
   font-weight: 400;
   letter-spacing: 0.166667px;
   line-height: 1.7em;
-  color: #818385;
+  color: var(--taupe);
+  background-color: var(--plaster);
+}
+
+::selection {
+  background: var(--oak);
+  color: var(--espresso);
 }
 
 p {
-  color: #818385;
+  color: var(--taupe);
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Work Sans", sans-serif;
-  color: #000;
+  color: var(--espresso);
   font-weight: 600;
 }
 
@@ -80,6 +91,9 @@ h6, .h6 {
   padding: 60px 0px;
 }
 
+/*------------------------------------------------------------------
+  BUTTONS
+-------------------------------------------------------------------*/
 .btn {
   padding: 18px 38px;
   border: 2px solid transparent;
@@ -88,66 +102,89 @@ h6, .h6 {
   font-size: 14px;
   line-height: 14px;
   font-weight: 600;
-  box-shadow: rgb(153, 153, 153) 0px 0px 0px 0px;
+  box-shadow: none;
 }
 .btn:focus {
   outline: 0px;
   border: 0px;
   box-shadow: none;
 }
+.btn:focus-visible {
+  outline: 2px solid var(--oak);
+  outline-offset: 3px;
+}
 
 .btn-main {
-  background: #f44336;
+  background: var(--walnut);
   color: #fff;
 }
 .btn-main:hover {
-  color: #fff !important;
-  background: #000;
+  color: var(--plaster) !important;
+  background: var(--espresso);
 }
 
-.btn-black {
-  background: #000;
-  color: #fff;
+.btn-black,
+.btn-dark {
+  background: var(--espresso);
+  border-color: var(--espresso);
+  color: var(--plaster);
 }
-.btn-black:hover {
-  background: #f44336;
+.btn-black:hover,
+.btn-dark:hover,
+.btn-dark:focus {
+  background: var(--walnut);
+  border-color: var(--walnut);
   color: #fff;
 }
 
 .btn-white {
-  background: #fff;
-  color: #000;
-  border-color: #fff;
+  background: var(--paper);
+  color: var(--espresso);
+  border-color: var(--paper);
 }
 .btn-white:hover {
   background: transparent;
   color: #fff;
 }
 
+/*------------------------------------------------------------------
+  LINKS, HELPERS, BOOTSTRAP COLOUR OVERRIDES
+-------------------------------------------------------------------*/
 a {
-  color: #000;
+  color: var(--espresso);
   transition: all 0.25s ease;
 }
 a:hover {
-  color: #f44336;
+  color: var(--walnut);
   text-decoration: none;
   outline: none;
 }
 
 .bg-primary {
-  background: #f44336 !important;
+  background: var(--walnut) !important;
 }
 
-.bg-secondary {
-  background: #f7f7f7 !important;
-}
-
+.bg-secondary,
 .bg-extra {
-  background: #e8eefb !important;
+  background: var(--travertine) !important;
+}
+
+/* "Hiring for a service or UX design role?" band on the About page */
+.cta .bg-dark {
+  background: var(--walnut) !important;
+}
+
+.border-top,
+.border-bottom {
+  border-color: var(--travertine) !important;
 }
 
 .text-color {
-  color: #f44336;
+  color: var(--walnut);
+}
+
+.text-black {
+  color: var(--espresso);
 }
 
 .page-title h1 {
@@ -161,8 +198,8 @@ a:hover {
   bottom: 0px;
   width: 40px;
   height: 2px;
-  margin-left: -25px;
-  background: #f44336;
+  margin-left: -20px;
+  background: var(--oak);
 }
 
 @media (max-width: 575px) {
@@ -177,8 +214,13 @@ a:hover {
     line-height: 43px;
   }
 }
+
 .cd-headline.clip span {
   padding: 0px;
+}
+
+.cd-headline.clip .cd-words-wrapper::after {
+  background-color: var(--oak);
 }
 
 .banner .cd-headline {
@@ -190,6 +232,9 @@ a:hover {
   position: relative;
 }
 
+/*------------------------------------------------------------------
+  NAVIGATION
+-------------------------------------------------------------------*/
 .main-nav .header-top-socials a {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -205,8 +250,12 @@ a:hover {
   font-weight: 700;
 }
 
+.navbar-toggler {
+  color: var(--espresso);
+}
+
 ul.dropdown-menu {
-  background: rgb(21, 21, 21);
+  background: var(--paper);
   border-radius: 0px;
   margin: 0px;
   padding: 0px;
@@ -222,16 +271,19 @@ ul.dropdown-menu > li > a, .navbar ul ul ul.dropdown-menu li .nav-link {
   transition: all 0.3s ease-in-out;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #27243e;
-  color: #fff;
+  border-bottom: 1px solid var(--travertine);
+  color: var(--espresso);
   text-transform: uppercase;
 }
+ul.dropdown-menu > li:last-child > a {
+  border-bottom: 0;
+}
 ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hover {
-  color: #f44336;
+  color: var(--walnut);
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
-  color: #fff;
+  color: var(--walnut);
   text-decoration: none;
   background-color: transparent;
 }
@@ -263,11 +315,11 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   -moz-transition: all 0.3s ease-in-out 0s;
   -ms-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  -ms-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  -o-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 10px 24px rgba(46, 40, 35, 0.12);
+  -webkit-box-shadow: 0 10px 24px rgba(46, 40, 35, 0.12);
+  -moz-box-shadow: 0 10px 24px rgba(46, 40, 35, 0.12);
+  -ms-box-shadow: 0 10px 24px rgba(46, 40, 35, 0.12);
+  -o-box-shadow: 0 10px 24px rgba(46, 40, 35, 0.12);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -339,6 +391,10 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
     padding: 20px;
   }
 }
+
+/*------------------------------------------------------------------
+  PROJECT GRID (home page)
+-------------------------------------------------------------------*/
 .portfolio {
   padding-bottom: 100px;
 }
@@ -350,16 +406,17 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   border-radius: 0px !important;
   padding-left: 0px;
   font-weight: 700;
+  color: var(--taupe);
 }
 .portfolio .btn-group .btn:hover {
-  color: #f44336;
+  color: var(--walnut);
 }
 .portfolio .btn-group:not(:first-child) > .btn, .portfolio .btn-group > .btn:not(:first-child) {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
 .portfolio .btn.active {
-  color: #f44336;
+  color: var(--walnut);
 }
 
 .inner-box {
@@ -369,6 +426,7 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
 .inner-box .image {
   position: relative;
   overflow: hidden;
+  background: var(--travertine);
 }
 
 .inner-box .image img {
@@ -401,11 +459,11 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   display: block;
   opacity: 0;
   transition: all 0.4s;
-  background-color: rgba(47, 50, 56, 0.8);
+  background-color: rgba(46, 40, 35, 0.55);
 }
 
 .inner-box:hover .image img {
-  transform: scale(1.1);
+  transform: scale(1.06);
 }
 
 .inner-box:hover .image .overlay-box:before {
@@ -443,7 +501,8 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
 
 .overlay-content h5 {
   text-transform: capitalize;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(251, 248, 244, 0.95);
+  color: var(--espresso);
   padding: 0px 8px;
   margin-bottom: 0px;
   transform: translateX(-150px);
@@ -455,10 +514,20 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   padding: 0px 8px;
   margin-top: 2px;
   text-transform: capitalize;
-  background: rgba(255, 255, 255, 0.9);
-  color: #2f3238;
+  background: rgba(251, 248, 244, 0.95);
+  color: var(--walnut);
   transform: translateX(-150px);
   transition: all 0.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inner-box:hover .image img {
+    transform: none;
+  }
+  .overlay-content h5,
+  .overlay-content p {
+    transition: none;
+  }
 }
 
 .portfolio-image {
@@ -466,8 +535,8 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   height: 60px;
   display: inline-block;
   text-align: center;
-  background: #000;
-  color: #fff;
+  background: var(--espresso);
+  color: var(--plaster);
   padding-top: 16px;
   position: absolute;
   top: 40%;
@@ -476,6 +545,9 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   left: 50%;
 }
 
+/*------------------------------------------------------------------
+  CASE STUDIES, SERVICES, QUESTIONS, SKILLS
+-------------------------------------------------------------------*/
 .info a {
   margin-right: 10px;
 }
@@ -489,6 +561,7 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   float: left;
   width: 65px;
   height: 120px;
+  color: var(--walnut);
 }
 
 .testimonial-content {
@@ -504,6 +577,10 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   margin-bottom: 25px;
 }
 
+.about-info span {
+  color: var(--walnut);
+}
+
 .about-info h3 {
   margin-top: 15px;
 }
@@ -514,17 +591,17 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
 .progress-bar-content .progress-title {
   text-transform: capitalize;
   font-size: 14px;
-  color: #000;
+  color: var(--espresso);
   font-weight: 600;
 }
 .progress-bar-content .progress-label {
   margin-bottom: 15px;
 }
 .progress-bar-content .progress-bar {
-  background: #000;
+  background: var(--walnut);
 }
 .progress-bar-content .progress-bar-units {
-  color: #000;
+  color: var(--taupe);
 }
 
 .about-list {
@@ -532,7 +609,7 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
 }
 .about-list li {
   text-transform: capitalize;
-  color: #000;
+  color: var(--espresso);
 }
 
 .progress {
@@ -542,7 +619,7 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   margin: 0 0 35px 0;
   border-radius: 0px;
   height: 7px;
-  background-color: #f7f8f9;
+  background-color: var(--travertine);
 }
 
 .progress-bar {
@@ -551,7 +628,7 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   top: 0;
   left: 0;
   height: 100%;
-  background: #e1a34c;
+  background: var(--walnut);
   border-radius: 0px;
   transition: all 3s ease-in-out;
 }
@@ -571,6 +648,10 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
     padding-bottom: 0px;
   }
 }
+
+/*------------------------------------------------------------------
+  CONTACT
+-------------------------------------------------------------------*/
 #map {
   height: 300px;
   margin: 75px 0px;
@@ -579,19 +660,22 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
 .form-control {
   border-radius: 0px;
   height: 45px;
-  border-color: #e8eefb;
+  border-color: var(--travertine);
+  background-color: var(--paper);
+  color: var(--espresso);
+}
+.form-control::placeholder {
+  color: var(--taupe);
+  opacity: 1;
 }
 .form-control:focus {
   box-shadow: none;
-  border-color: #f44336;
+  border-color: var(--walnut);
+  background-color: #fff;
 }
 
 textarea.form-control {
   height: auto;
-}
-
-.text-black {
-  color: #000;
 }
 
 .contact-title h2 {
@@ -605,150 +689,35 @@ textarea.form-control {
   bottom: 0px;
   width: 40px;
   height: 2px;
-  margin-left: -25px;
-  background: #f44336;
+  margin-left: -20px;
+  background: var(--oak);
 }
 
 .letter-spacing {
   letter-spacing: 1px;
 }
 
-.post .image-content {
-  position: relative;
-}
-.post .image-content img {
-  width: 100%;
-}
-.post .author img {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-}
-.post .post-content {
-  margin-top: 30px;
-}
-.post .post-content h4 {
-  margin-top: 10px;
-  transition: all 0.35s ease;
-}
-.post .post-content a:hover h4 {
-  color: #f44336;
-}
-
-.pagination {
-  margin-top: 70px;
-}
-.pagination li a {
-  background: #f6f6f6;
-  font-size: 14px;
-  font-weight: 600;
-  display: inline-block;
-  padding: 9px 18px;
-  color: #666666;
-  transition: 0.3s;
-}
-.pagination li a:hover {
-  background: #f44336;
-  color: #fff;
-}
-.pagination li.active a {
-  background: #f44336;
-  color: #fff;
-}
-
-.sidebar-widget .widget {
-  padding-left: 20px;
-}
-.sidebar-widget .widget-title {
-  text-transform: capitalize;
-  position: relative;
-  padding-bottom: 20px;
-}
-.sidebar-widget .widget-title:after {
-  position: absolute;
-  content: "";
-  left: 0px;
-  bottom: 0px;
-  width: 30px;
-  height: 2px;
-  background: #000;
-}
-.sidebar-widget .follow a {
-  margin-right: 10px;
-}
-.sidebar-widget .tags a {
-  text-transform: capitalize;
-  font-size: 15px;
-  padding: 2px 13px;
-  display: inline-block;
-  margin-bottom: 8px;
-  background: #dedede;
-}
-.sidebar-widget .category ul {
-  line-height: 40px;
-}
-.sidebar-widget .category ul li {
-  font-size: 15px;
-  text-transform: capitalize;
-}
-
-.post-body span {
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-
-.single-post {
-  margin-bottom: 70px;
-}
-
-.share ul li a {
-  margin-right: 20px;
-}
-
-.mb-45 {
-  margin-bottom: 45px;
-}
-
-.comments-text p {
-  font-size: 14px;
-  margin-bottom: 10px;
-  line-height: 26px;
-}
-
-@media (max-width: 575px) {
-  .media {
-    display: block;
-  }
-  .media img {
-    margin-bottom: 10px;
-  }
-}
-@media (max-width: 400px) {
-  .media {
-    display: block;
-  }
-  .media img {
-    margin-bottom: 10px;
-  }
-}
-@media (max-width: 767px) {
-  .media {
-    display: block;
-  }
-  .media img {
-    margin-bottom: 10px;
-  }
-}
+/*------------------------------------------------------------------
+  FOOTER
+-------------------------------------------------------------------*/
 .footer {
   padding: 60px 0px;
-  background: #000;
+  background: var(--espresso);
+}
+
+.footer p {
+  color: var(--stone);
+}
+
+.footer .text-white {
+  color: var(--plaster) !important;
 }
 
 .footer-widget a {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--stone);
   text-transform: capitalize;
 }
 .footer-widget a:hover {
-  color: #f44336;
+  color: var(--oak);
 }
 /*# sourceMappingURL=style.css.map */
