@@ -1,9 +1,0 @@
-# Hugo build output & caches — GitHub Actions builds these fresh each deploy
-public/
-.idea/
-resources/_gen/
-.hugo_build.lock
-
-# OS cruft
-.DS_Store
-Thumbs.db
