@@ -958,3 +958,42 @@ a:focus-visible,
     text-align: center;
   }
 }
+/* Experience & education: a little round icon per entry */
+.about-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+.about-text {
+  min-width: 0;
+}
+.about-icon {
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  margin-top: 2px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: transform .35s cubic-bezier(.34, 1.56, .64, 1);
+}
+.about-icon svg {
+  width: 38px;
+  height: 38px;
+  fill: none;
+  stroke: var(--espresso);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+}
+.about-info:hover .about-icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+.about-icon--blush  { background: #EDD6CC; }
+.about-icon--butter { background: #EFE2C3; }
+.about-icon--sage   { background: #DCE0CB; }
+.about-icon--mist   { background: #D7DFE1; }
+@media (prefers-reduced-motion: reduce) {
+  .about-icon { transition: none; }
+}
