@@ -327,3 +327,21 @@
     });
   }
 })(jQuery);
+
+// Case-study PDFs follow the site language: cilab.pdf → cilab-it.pdf / -nl / -fr
+(function () {
+  var PDF = /(^|\/)(cilab|gutsy|zilvermeer|materialdata|orientme|side-projects)(-(it|nl|fr))?\.pdf$/i;
+  function lang() {
+    var l = (document.documentElement.lang || '').slice(0, 2).toLowerCase();
+    return /^(it|nl|fr)$/.test(l) ? l : 'en';
+  }
+  function sync() {
+    var suffix = lang() === 'en' ? '' : '-' + lang();
+    document.querySelectorAll('a[href$=".pdf"]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (PDF.test(h)) a.setAttribute('href', h.replace(PDF, '$1$2' + suffix + '.pdf'));
+    });
+  }
+  sync();
+  new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+})();
