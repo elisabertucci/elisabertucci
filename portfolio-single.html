@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
+  <link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -70,8 +71,13 @@
 
 <section class="section portfolio-single">
   <div class="container">
-    <figure class="case-hero">
-      <img src="images/portfolio/cilab-hero.jpg" alt="CiLAB prototype screens: the Open Atelier page in front of the inventory with its add-item form" width="2220" height="1248">
+    <figure class="case-hero case-hero--slides">
+      <div class="owl-carousel case-slides">
+        <img src="images/portfolio/cilab-hero.jpg" alt="CiLAB prototype screens: the Open Atelier page in front of the inventory with its add-item form" width="2220" height="1248">
+        <video src="videos/cilab-1.mp4" muted playsinline controls preload="metadata"></video>
+        <video src="videos/cilab-2.mp4" muted playsinline controls preload="metadata"></video>
+        <video src="videos/cilab-3.mp4" muted playsinline controls preload="metadata"></video>
+      </div>
     </figure>
 
     <div class="row">
@@ -122,6 +128,7 @@
 
 <script src="plugins/jQuery/jquery.min.js"></script>
 <script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
 <script data-goatcounter="https://reindeerladybugwinterberry.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
 <script src="js/script.js"></script>

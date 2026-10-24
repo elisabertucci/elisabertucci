@@ -948,3 +948,39 @@ a:focus-visible,
 @media (prefers-reduced-motion: reduce) {
   .about-icon { transition: none; }
 }
+
+/* CiLAB hero: the image, then three videos, in one 16:9 frame */
+.case-hero--slides {
+  aspect-ratio: auto;
+  overflow: visible;
+  background: none;
+}
+.case-slides img,
+.case-slides video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: var(--travertine);
+}
+.case-slides .owl-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.case-slides .owl-dot span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--travertine);
+  transition: background .2s;
+}
+.case-slides .owl-dot.active span,
+.case-slides .owl-dot:hover span {
+  background: var(--walnut);
+}
+.case-slides .owl-dot:focus { outline: 0; }
+.case-slides .owl-dot:focus-visible { outline: 2px solid var(--oak); outline-offset: 3px; }

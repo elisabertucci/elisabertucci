@@ -300,6 +300,33 @@
     });
   });
 
+  // CiLAB hero: the image shows for 5 s, then each video plays to its end and the next one slides in
+  var $slides = $('.case-slides');
+  if ($.fn.owlCarousel && $slides.length) {
+    var wait;
+    var next = function () { $slides.trigger('next.owl.carousel'); };
+    var show = function (i) {
+      clearTimeout(wait);
+      $slides.find('video').each(function () { this.pause(); });
+      var video = $slides.find('.owl-item').eq(i).find('video')[0];
+      if (!video) {
+        if ($slides.find('video').filter(function () { return !this.error; }).length) wait = setTimeout(next, 5000);
+        return;   // no playable video left: the image simply stays
+      }
+      video.currentTime = 0;
+      video.play().catch(function () { if (video.error) next(); });   // blocked autoplay keeps the play button
+    };
+    $slides.find('video').on('ended error', function () {
+      if ($(this).closest('.owl-item').hasClass('active')) next();
+    });
+    $slides.on('changed.owl.carousel', function (e) {
+      if (e.property.name === 'position') show(e.item.index);
+    });
+    $slides.owlCarousel({ items: 1, rewind: true, mouseDrag: false, touchDrag: false, pullDrag: false, smartSpeed: 600 });
+    $slides.find('.owl-dot').each(function (i) { this.setAttribute('aria-label', 'Slide ' + (i + 1)); });
+    show(0);
+  }
+
   // Project grid filter (home page)
   var grid = document.querySelector('.shuffle-wrapper');
   if (window.Shuffle && grid) {
