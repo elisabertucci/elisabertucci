@@ -650,54 +650,6 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
 }
 
 /*------------------------------------------------------------------
-  CONTACT
--------------------------------------------------------------------*/
-#map {
-  height: 300px;
-  margin: 75px 0px;
-}
-
-.form-control {
-  border-radius: 0px;
-  height: 45px;
-  border-color: var(--travertine);
-  background-color: var(--paper);
-  color: var(--espresso);
-}
-.form-control::placeholder {
-  color: var(--taupe);
-  opacity: 1;
-}
-.form-control:focus {
-  box-shadow: none;
-  border-color: var(--walnut);
-  background-color: #fff;
-}
-
-textarea.form-control {
-  height: auto;
-}
-
-.contact-title h2 {
-  position: relative;
-  padding-bottom: 30px;
-}
-.contact-title h2:after {
-  position: absolute;
-  content: "";
-  left: 50%;
-  bottom: 0px;
-  width: 40px;
-  height: 2px;
-  margin-left: -20px;
-  background: var(--oak);
-}
-
-.letter-spacing {
-  letter-spacing: 1px;
-}
-
-/*------------------------------------------------------------------
   FOOTER
 -------------------------------------------------------------------*/
 .footer {
@@ -721,7 +673,6 @@ textarea.form-control {
   color: var(--oak);
 }
 .navbar-brand img { height: 40px; width: auto; }
-/*# sourceMappingURL=style.css.map */
 
 /* Case study hero: never wider than the page column, and a calmer height */
 .case-hero {

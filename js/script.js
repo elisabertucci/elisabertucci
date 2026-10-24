@@ -300,30 +300,12 @@
     });
   });
 
-  // Question slider (How I work page)
-  if ($.fn.owlCarousel && $('.owl-carousel').length) {
-    $('.owl-carousel').owlCarousel({
-      items: 1,
-      loop: true,
-      autoplay: true,
-      dots: false,
-      autoplayTimeout: 8000
-    });
-  }
-
   // Project grid filter (home page)
   var grid = document.querySelector('.shuffle-wrapper');
   if (window.Shuffle && grid) {
     var shuffle = new window.Shuffle(grid, { itemSelector: '.shuffle-item', buffer: 1 });
     $('input[name="shuffle-filter"]').on('change', function (evt) {
       if (evt.currentTarget.checked) shuffle.filter(evt.currentTarget.value);
-    });
-  }
-
-  // Image lightbox, wherever a gallery uses it
-  if ($.fn.magnificPopup) {
-    $('.portfolio-gallery').each(function () {
-      $(this).find('.popup-gallery').magnificPopup({ type: 'image', gallery: { enabled: true } });
     });
   }
 })(jQuery);
